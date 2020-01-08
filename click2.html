@@ -1,0 +1,23 @@
+<!-- click Event 2. Yöntem -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="text" >Lorem ipsum dolor sit amet.</p>
+        <button id="button">Click me</button>
+
+        <script>
+            // document.getElementById('button').onclick = () => {
+            //     document.getElementById('text').style.color= 'blue'
+            // }
+
+            document.getElementById('button').onclick = myFunction;
+            
+            
+            function myFunction () {
+                document.getElementById('text').style.color= 'red'
+            }
+            
+        </script>
+    </body>
+</html>

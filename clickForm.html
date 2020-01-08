@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+        Adiniz <input type="text" id ="isim">
+        <br><br>
+        Soyadiniz <input type="text" id = "soyisim">
+        <br><br>
+        <button id = "button">Click me</button>
+        <br><br>
+        <span id="text"></span>
+
+        <script>
+           
+            // document.getElementById('isim').focus();
+
+            document.body.onload = () => {
+                document.getElementById('isim').focus();
+            }
+
+            document.getElementById('button').onclick = () => {
+                var ad = document.getElementById('isim').value;
+                var soyad = document.getElementById('soyisim').value;
+
+                console.log(ad, soyad);
+
+                document.getElementById('text').innerHTML = `Hosgeldiniz ${ad.toUpperCase()} ${soyad.toUpperCase()} Bey/Hanimefendi`;
+                document.getElementById('text').style.border = '1px solid black';
+                document.getElementById('text').style.padding = '10px';
+                document.getElementById('text').style.background = 'lightblue';
+            }
+        
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

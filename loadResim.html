@@ -1,0 +1,26 @@
+
+<!-- 1. Yöntem ile -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <img id = "resim1" src="https://media1.tenor.com/images/1a2b3e105725902fdb8392b682dc9a2f/tenor.gif" onload="loadText1()" width="300" height="250">
+
+        <h1 id = "text1"></h1>
+
+        <img id ="resim2" src="https://media1.tenor.com/images/1a2b3e105725902fdb8392b682dc9a2f/tenor.gif" onload= "loadText2()" width="300" height="250">
+
+        <h1 id="text2"></h1>
+
+        <script>
+            function loadText1 () {
+                document.getElementById('text1').innerHTML = 'Afiyet Olsun';
+            }
+        
+            const loadText2 = () => {
+                document.getElementById('text2').innerHTML = 'Size de Afiyet Olsun';
+            }
+            
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Toplantiya katilim durumunuzu bildiriniz</h1>
+        <form>
+            <label for="isim">Isminiz</label>
+            <input type="text" id="isim">
+            <br><br>
+            <label for="soyisim">Soyisminiz</label>
+            <input type="text" id="soyisim">
+            <br><br>
+            <label for="evet">Evet</label>
+            <input type="checkbox" id="evet">
+        </form>
+        <br><br>
+        <button id="button">Gönder</button>
+
+        <ul id="liste">
+            <li>ISIM, SOYISIM, KATILIM DURUMU :</li>
+        </ul>
+
+        <script>
+            
+            var sahis = 'Ahmet';
+            var sahisSoyad = 'Yavas';
+            var katilim ;
+
+            document.getElementById('isim').onchange = () => 
+                sahis = document.getElementById('isim').value;
+
+
+            document.getElementById('soyisim').onchange = () => 
+                sahisSoyad = document.getElementById('soyisim').value;
+         
+        
+            document.getElementById('evet').onchange = () => 
+                katilim = document.getElementById('evet').checked;
+           
+
+            document.getElementById('button').onclick = () => {
+                document.getElementById('liste').innerHTML += `<li>${sahis}, ${sahisSoyad}, ${katilim ? 'Evet' : 'Hayir'}`;
+                document.getElementById('isim').value = '';
+                document.getElementById('soyisim').value = '';
+                sahis = 'Ahmet';
+                sahisSoyad = 'Yavas';
+            }
+        </script>
+    </body>
+</html>
